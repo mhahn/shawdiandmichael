@@ -14,7 +14,10 @@ const styles = {
 const page = () =>
   <div style={styles.container}>
     <Typography type="headline" gutterBottom>
-      Boop
+      Details coming soon!
+    </Typography>
+    <Typography type="subheading" gutterBottom>
+      (ps. love you)
     </Typography>
   </div>;
 
