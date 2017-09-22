@@ -18,7 +18,7 @@ const styles = {
 };
 
 let Header = ({ classes }) => (
-  <div style={{ color: "white" }}>
+  <div style={{ color: "#f2f2f2" }}>
     <Typography
       type="display4"
       gutterBottom
@@ -33,7 +33,7 @@ let Header = ({ classes }) => (
       color="inherit"
       style={{ fontFamily: "'Over the Rainbow', cursive" }}
     >
-      July 28, 2018
+      July 28, 2018 • Sonoma, CA
     </Typography>
   </div>
 );
