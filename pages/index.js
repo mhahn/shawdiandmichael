@@ -10,10 +10,12 @@ import Password from "../components/password";
 
 const styles = {
   container: {
-    textAlign: "center"
-  },
-  content: {
-    paddingTop: "25%"
+    textAlign: "center",
+    display: "flex",
+    alignItems: "center",
+    alignContent: "center",
+    height: "100%",
+    justifyContent: "center"
   }
 };
 
