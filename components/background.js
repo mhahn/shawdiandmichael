@@ -4,6 +4,7 @@ const styles = {
   background: {
     background:
       "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('assets/img/home.jpg')",
+    backgroundColor: "black",
     backgroundSize: "cover",
     position: "absolute",
     width: "100%",
