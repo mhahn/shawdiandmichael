@@ -32,7 +32,7 @@ export default class MaterialDocument extends Document {
           />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+            href="https://fonts.googleapis.com/css?family=Indie+Flower|Lato|Over+the+Rainbow|Quicksand:300,400,500"
           />
         </Head>
         <body>

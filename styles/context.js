@@ -1,12 +1,13 @@
 import { create } from "jss";
 import preset from "jss-preset-default";
 import { SheetsRegistry } from "react-jss";
-import createPalette from "material-ui/styles/palette";
-import createMuiTheme from "material-ui/styles/theme";
+import { createMuiTheme } from "material-ui/styles";
 import createGenerateClassName from "material-ui/styles/createGenerateClassName";
 
 const theme = createMuiTheme({
-  palette: createPalette({})
+  typography: {
+    fontFamily: "'Quicksand', sans-serif"
+  }
 });
 
 const jss = create(preset());

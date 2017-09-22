@@ -4,6 +4,8 @@ import Router from "koa-router";
 import bodyParser from "koa-bodyparser";
 import cors from "kcors";
 import logger from "koa-bunyan-logger";
+import mount from 'koa-mount';
+import serve from 'koa-static';
 import { parse as parseUrl } from "url";
 
 import api from "./routers/api";
@@ -31,6 +33,7 @@ async function main() {
   server.use(logger.requestIdContext());
   server.use(logger.requestLogger());
   server.use(logger.timeContext());
+  server.use(mount('/assets', serve('./assets')));
 
   server.use(async (ctx, next) => {
     ctx.res.statusCode = 200;

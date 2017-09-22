@@ -1,24 +1,51 @@
 import Head from "next/head";
 import Button from "material-ui/Button";
+import TextField from "material-ui/TextField";
 import Typography from "material-ui/Typography";
+import withStyles from "material-ui/styles";
 
 import withRoot from "../components/withRoot";
+import Background from "../components/background";
+import Password from "../components/password";
 
 const styles = {
   container: {
-    textAlign: "center",
-    paddingTop: 200
+    textAlign: "center"
+  },
+  content: {
+    paddingTop: "25%"
   }
 };
 
-const page = () =>
-  <div style={styles.container}>
-    <Typography type="headline" gutterBottom>
-      Details coming soon!
+let Header = ({ classes }) => (
+  <div style={{ color: "white" }}>
+    <Typography
+      type="display4"
+      gutterBottom
+      color="inherit"
+      style={{ fontFamily: "'Over the Rainbow', cursive" }}
+    >
+      Shawdi & Michael
     </Typography>
-    <Typography type="subheading" gutterBottom>
-      (ps. love you)
+    <Typography
+      type="display1"
+      gutterBottom
+      color="inherit"
+      style={{ fontFamily: "'Over the Rainbow', cursive" }}
+    >
+      July 28, 2018
     </Typography>
-  </div>;
+  </div>
+);
+
+const page = () => (
+  <Background>
+    <div style={styles.container}>
+      <div style={styles.content}>
+        <Header />
+      </div>
+    </div>
+  </Background>
+);
 
 export default withRoot(page);
