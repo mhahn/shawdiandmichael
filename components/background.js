@@ -12,7 +12,7 @@ const styles = {
   },
   overlay: {
     zIndex: 1,
-    background: "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6))",
+    background: "linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9))",
     backgroundSize: "cover",
     position: "absolute",
     width: "100%",

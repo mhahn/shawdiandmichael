@@ -8,7 +8,7 @@ import { CSSTransitionGroup } from "react-transition-group";
 import withRoot from "../components/withRoot";
 import Background from "../components/background";
 import Header from "../components/header";
-import Password from "../components/password";
+import Auth from "../components/auth";
 
 const styles = {
   "@global": {
@@ -19,11 +19,15 @@ const styles = {
   container: {
     textAlign: "center",
     display: "flex",
+    flexDirection: "column",
     alignItems: "center",
     alignContent: "center",
     height: "100%",
     width: "100%",
     justifyContent: "center"
+  },
+  auth: {
+    marginTop: 50
   },
   backgroundAppear: {
     opacity: 0.01
@@ -48,6 +52,7 @@ const Page = ({ classes }) => (
     <Background>
       <div className={classes.container}>
         <Header />
+        <Auth className={classes.auth} />
       </div>
     </Background>
   </CSSTransitionGroup>

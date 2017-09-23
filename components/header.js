@@ -1,9 +1,10 @@
 import Typography from "material-ui/Typography";
+import { withTheme } from "material-ui/styles";
 
-const Header = () => (
-  <div style={{ color: "#f2f2f2" }}>
+const Header = ({ theme }) => (
+  <div style={{ color: theme.custom.offWhite }}>
     <Typography
-      type="display4"
+      type="display3"
       gutterBottom
       color="inherit"
       style={{ fontFamily: "'Over the Rainbow', cursive" }}
@@ -21,4 +22,4 @@ const Header = () => (
   </div>
 );
 
-export default Header;
+export default withTheme(Header);
