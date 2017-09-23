@@ -27,19 +27,21 @@ const styles = {
 };
 
 const Background = ({ children, classes }) => (
-  <ProgressiveImage src="assets/img/home.jpg" placeholder="">
-    {src => {
-      if (!src) return null;
+  <div>
+    <ProgressiveImage src="assets/img/home.jpg" placeholder="">
+      {src => {
+        if (!src) return null;
 
-      return (
-        <div>
-          <img className={classes.image} src={src} />
-          <div className={classes.overlay} />
-          <div className={classes.content}>{children}</div>
-        </div>
-      );
-    }}
-  </ProgressiveImage>
+        return (
+          <div>
+            <img className={classes.image} src={src} />
+            <div className={classes.overlay} />
+            <div className={classes.content}>{children}</div>
+          </div>
+        );
+      }}
+    </ProgressiveImage>
+  </div>
 );
 
 export default withStyles(styles)(Background);
