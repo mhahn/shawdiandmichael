@@ -28,6 +28,8 @@
     "next": "beta",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-progressive-image": "^0.1.2",
+    "react-transition-group": "^1.2.0",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
     "verror": "^1.10.0"

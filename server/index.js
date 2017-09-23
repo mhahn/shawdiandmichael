@@ -33,7 +33,7 @@ async function main() {
   server.use(logger.requestIdContext());
   server.use(logger.requestLogger());
   server.use(logger.timeContext());
-  server.use(mount("/assets", serve("./assets", { maxage: 2592000000 })));
+  server.use(mount("/assets", serve("./assets")));
 
   server.use(async (ctx, next) => {
     ctx.res.statusCode = 200;

@@ -1,53 +1,56 @@
+import { Component } from "react";
 import Head from "next/head";
 import Button from "material-ui/Button";
 import TextField from "material-ui/TextField";
-import Typography from "material-ui/Typography";
-import withStyles from "material-ui/styles";
+import { withStyles } from "material-ui/styles";
+import { CSSTransitionGroup } from "react-transition-group";
 
 import withRoot from "../components/withRoot";
 import Background from "../components/background";
+import Header from "../components/header";
 import Password from "../components/password";
 
 const styles = {
+  "@global": {
+    html: {
+      backgroundColor: "black"
+    }
+  },
   container: {
     textAlign: "center",
     display: "flex",
     alignItems: "center",
     alignContent: "center",
     height: "100%",
+    width: "100%",
     justifyContent: "center"
+  },
+  backgroundAppear: {
+    opacity: 0.01
+  },
+  backgroundAppearActive: {
+    opacity: 1,
+    transition: "opacity 1s ease-in-out"
   }
 };
 
-let Header = ({ classes }) => (
-  <div style={{ color: "#f2f2f2" }}>
-    <Typography
-      type="display4"
-      gutterBottom
-      color="inherit"
-      style={{ fontFamily: "'Over the Rainbow', cursive" }}
-    >
-      Shawdi & Michael
-    </Typography>
-    <Typography
-      type="display1"
-      gutterBottom
-      color="inherit"
-      style={{ fontFamily: "'Over the Rainbow', cursive" }}
-    >
-      July 28, 2018 • Sonoma, CA
-    </Typography>
-  </div>
-);
-
-const page = () => (
-  <Background>
-    <div style={styles.container}>
-      <div style={styles.content}>
+const Page = ({ classes }) => (
+  <CSSTransitionGroup
+    transitionAppear={true}
+    transitionAppearTimeout={1000}
+    transitionEnter={false}
+    transitionLeave={false}
+    transitionName={{
+      appear: classes.backgroundAppear,
+      appearActive: classes.backgroundAppearActive
+    }}
+  >
+    <Background>
+      <div className={classes.container}>
         <Header />
       </div>
-    </div>
-  </Background>
+    </Background>
+  </CSSTransitionGroup>
 );
 
-export default withRoot(page);
+export default withRoot(withStyles(styles)(Page));
