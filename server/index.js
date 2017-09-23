@@ -3,7 +3,6 @@ import Koa from "koa";
 import Router from "koa-router";
 import bodyParser from "koa-bodyparser";
 import cors from "kcors";
-import logger from "koa-bunyan-logger";
 import mount from "koa-mount";
 import serve from "koa-static";
 import { parse as parseUrl } from "url";
@@ -29,10 +28,6 @@ async function main() {
 
   server.use(cors());
   server.use(bodyParser());
-  server.use(logger({ level: "trace" }));
-  server.use(logger.requestIdContext());
-  server.use(logger.requestLogger());
-  server.use(logger.timeContext());
   server.use(mount("/assets", serve("./assets")));
 
   server.use(async (ctx, next) => {
