@@ -4,8 +4,11 @@ const router = new Router({
   prefix: "/api/v1"
 });
 
-router.get("/hello", async ctx => {
-  ctx.body = { hello: "world" };
+router.post("/auth", async ctx => {
+  ctx.session.auth = true;
+  const { password } = ctx.request.body;
+  ctx.session.authenticated = password === process.env.PASSWORD;
+  ctx.body = { ok: ctx.session.authenticated };
 });
 
 export default router;

@@ -5,6 +5,8 @@ import bodyParser from "koa-bodyparser";
 import cors from "kcors";
 import mount from "koa-mount";
 import serve from "koa-static";
+import session from "koa-session";
+import logger from "koa-bunyan-logger";
 import { parse as parseUrl } from "url";
 
 import api from "./routers/api";
@@ -27,6 +29,7 @@ async function main() {
   });
 
   server.use(cors());
+  server.use(logger());
   server.use(bodyParser());
   server.use(mount("/assets", serve("./assets")));
 
@@ -50,6 +53,16 @@ async function main() {
     }
   });
 
+  server.keys = [process.env.SECRET_KEY];
+  server.use(
+    session(
+      {
+        httpOnly: false,
+        rolling: true
+      },
+      server
+    )
+  );
   server.use(router.routes());
   server.listen(port, err => {
     if (err) throw err;
