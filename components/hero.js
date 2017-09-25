@@ -2,6 +2,7 @@ import { withStyles } from "material-ui/styles";
 import Typography from "material-ui/Typography";
 import Hidden from "material-ui/Hidden";
 
+import heroImage from "./hero-image";
 import DownArrow from "./down-arrow";
 
 const styles = theme => ({
@@ -12,7 +13,7 @@ const styles = theme => ({
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    background: "url('assets/img/vineyard-road.jpg') center no-repeat",
+    background: `url(${heroImage}) center no-repeat`,
     backgroundSize: "cover",
     textAlign: "center"
   },
