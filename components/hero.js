@@ -25,6 +25,14 @@ const styles = theme => ({
     position: "absolute",
     bottom: 100
   },
+  title: {
+    [theme.breakpoints.down("sm")]: {
+      paddingBottom: 150
+    },
+    [theme.breakpoints.up("sm")]: {
+      paddingBottom: 75
+    }
+  },
   titleText: {
     fontFamily: "'Over the Rainbow', cursive",
     color: theme.custom.offWhite
