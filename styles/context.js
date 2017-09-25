@@ -9,7 +9,7 @@ const theme = createMuiTheme({
     fontFamily: "'Quicksand', sans-serif"
   },
   custom: {
-    offWhite: "#f2f2f2",
+    offWhite: "white",
     headerHeight: 50
   }
 });

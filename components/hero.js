@@ -1,10 +1,10 @@
 import { withStyles } from "material-ui/styles";
 import Typography from "material-ui/Typography";
+import Hidden from "material-ui/Hidden";
 
-import Title from "./title";
 import DownArrow from "./down-arrow";
 
-const styles = {
+const styles = theme => ({
   content: {
     minHeight: "100vh",
     position: "relative",
@@ -12,7 +12,9 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "column",
-    backgroundColor: "black"
+    background: "url('assets/img/vineyard-road.jpg') center no-repeat",
+    backgroundSize: "cover",
+    textAlign: "center"
   },
   scroll: {
     paddingTop: "4rem",
@@ -22,14 +24,47 @@ const styles = {
     position: "absolute",
     bottom: 100
   },
+  titleText: {
+    fontFamily: "'Over the Rainbow', cursive",
+    color: theme.custom.offWhite
+  },
   text: {
-    color: "white"
+    color: theme.custom.offWhite
   }
-};
+});
 
 const Hero = ({ classes }) => (
   <div className={classes.content}>
-    <Title />
+    <div className={classes.title}>
+      <Hidden smDown implementation="css">
+        <Typography
+          className={classes.titleText}
+          type="display3"
+          gutterBottom
+          color="inherit"
+        >
+          Shawdi & Michael
+        </Typography>
+      </Hidden>
+      <Hidden smUp implementation="css">
+        <Typography
+          className={classes.titleText}
+          type="display2"
+          gutterBottom
+          color="inherit"
+        >
+          Shawdi & Michael
+        </Typography>
+      </Hidden>
+      <Typography
+        className={classes.titleText}
+        type="headline"
+        gutterBottom
+        color="inherit"
+      >
+        July 28, 2018 • Sonoma, CA
+      </Typography>
+    </div>
     <div className={classes.scroll}>
       <Typography type="subheading" className={classes.text} gutterBottom>
         Scroll for More
