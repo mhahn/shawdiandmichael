@@ -1,20 +1,29 @@
 import { withStyles } from "material-ui/styles";
+import withWidth from "material-ui/utils/withWidth";
 import Typography from "material-ui/Typography";
+import compose from "recompose/compose";
 
 import Section from "./section";
 
-const styles = {
+const styles = theme => ({
   row: {
     display: "flex",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
+    [theme.breakpoints.up("md")]: {
+      flexDirection: "row"
+    },
+    [theme.breakpoints.down("md")]: {
+      flexDirection: "column"
+    }
   },
   cell: {
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
-    alignItems: "center"
+    alignItems: "center",
+    padding: 30
   }
-};
+});
 
 const Overview = ({ classes }) => (
   <Section>
@@ -56,4 +65,4 @@ const Overview = ({ classes }) => (
   </Section>
 );
 
-export default withStyles(styles)(Overview);
+export default compose(withStyles(styles), withWidth())(Overview);
