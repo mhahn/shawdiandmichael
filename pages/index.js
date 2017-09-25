@@ -5,7 +5,8 @@ import { withStyles } from "material-ui/styles";
 
 import withRoot from "../components/withRoot";
 import Header from "../components/header";
-import Splash from "../components/splash";
+import Hero from "../components/hero";
+import Overview from "../components/overview";
 
 const styles = theme => ({
   "@global": {
@@ -28,12 +29,6 @@ const styles = theme => ({
     display: "flex",
     flexDirection: "column",
     position: "relative"
-  },
-  section: {
-    boxSizing: "border-box",
-    width: "100%",
-    padding: "6rem 1.5em",
-    position: "relative"
   }
 });
 
@@ -41,14 +36,8 @@ const Page = ({ classes }) => (
   <div>
     <Header />
     <div className={classes.content}>
-      <div
-        className={classes.section}
-        style={{ backgroundColor: "black", padding: 0 }}
-      >
-        <Splash />
-      </div>
-      <div className={classes.section} style={{ backgroundColor: "blue" }} />
-      <div className={classes.section} style={{ backgroundColor: "green" }} />
+      <Hero />
+      <Overview />
     </div>
   </div>
 );
