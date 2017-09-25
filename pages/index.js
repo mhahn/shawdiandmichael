@@ -1,19 +1,16 @@
 import { Component } from "react";
 import Head from "next/head";
-import Button from "material-ui/Button";
-import TextField from "material-ui/TextField";
+import Typography from "material-ui/Typography";
 import { withStyles } from "material-ui/styles";
-import { CSSTransitionGroup } from "react-transition-group";
 
 import withRoot from "../components/withRoot";
-import Background from "../components/background";
 import Header from "../components/header";
-import Auth from "../components/auth";
+import Splash from "../components/splash";
 
-const styles = {
+const styles = theme => ({
   "@global": {
     html: {
-      backgroundColor: "black"
+      backgroundColor: "white"
     }
   },
   container: {
@@ -26,36 +23,34 @@ const styles = {
     width: "100%",
     justifyContent: "center"
   },
-  auth: {
-    marginTop: 50
+  content: {
+    marginTop: theme.custom.headerHeight,
+    display: "flex",
+    flexDirection: "column",
+    position: "relative"
   },
-  backgroundAppear: {
-    opacity: 0.01
-  },
-  backgroundAppearActive: {
-    opacity: 1,
-    transition: "opacity 1s ease-in-out"
+  section: {
+    boxSizing: "border-box",
+    width: "100%",
+    padding: "6rem 1.5em",
+    position: "relative"
   }
-};
+});
 
 const Page = ({ classes }) => (
-  <CSSTransitionGroup
-    transitionAppear={true}
-    transitionAppearTimeout={1000}
-    transitionEnter={false}
-    transitionLeave={false}
-    transitionName={{
-      appear: classes.backgroundAppear,
-      appearActive: classes.backgroundAppearActive
-    }}
-  >
-    <Background>
-      <div className={classes.container}>
-        <Header />
-        <Auth className={classes.auth} />
+  <div>
+    <Header />
+    <div className={classes.content}>
+      <div
+        className={classes.section}
+        style={{ backgroundColor: "black", padding: 0 }}
+      >
+        <Splash />
       </div>
-    </Background>
-  </CSSTransitionGroup>
+      <div className={classes.section} style={{ backgroundColor: "blue" }} />
+      <div className={classes.section} style={{ backgroundColor: "green" }} />
+    </div>
+  </div>
 );
 
 export default withRoot(withStyles(styles)(Page));
