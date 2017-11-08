@@ -76,6 +76,9 @@ const styles = theme => ({
 
 const Page = ({ classes }) => (
   <div>
+    <Head>
+      <title>Shawdi & Michael</title>
+    </Head>
     <div className={classes.content}>
       <HeaderTitle />
       <StickyContainer className={classes.stickyContainer}>
