@@ -6,11 +6,13 @@ import createGenerateClassName from "material-ui/styles/createGenerateClassName"
 
 const theme = createMuiTheme({
   typography: {
-    fontFamily: "'Quicksand', sans-serif"
+    fontFamily: "'Raleway', sans-serif"
   },
   custom: {
-    offWhite: "white",
-    headerHeight: 50
+    white: "white",
+    black: "black",
+    headerHeight: 50,
+    titleFontFamily: "'Sigmar One', cursive"
   }
 });
 

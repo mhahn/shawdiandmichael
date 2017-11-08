@@ -31,8 +31,8 @@ export default class MaterialDocument extends Document {
             }
           />
           <link
+            href="https://fonts.googleapis.com/css?family=Raleway|Sigmar+One"
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Indie+Flower|Lato|Over+the+Rainbow|Quicksand:300,400,500"
           />
         </Head>
         <body>
