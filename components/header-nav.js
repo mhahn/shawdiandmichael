@@ -1,7 +1,9 @@
 import { withStyles } from "material-ui/styles";
 import Typography from "material-ui/Typography";
 import classNames from "classnames";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
+
+const SCROLL_DURATION = 500;
 
 const styles = theme => ({
   container: {
@@ -44,6 +46,17 @@ const HeaderNav = ({ classes, style, sticky }) => (
     className={classNames(classes.container, { [classes.sticky]: sticky })}
     style={style}
   >
+    <Typography
+      onClick={() => {
+        scroll.scrollToTop({ duration: SCROLL_DURATION });
+      }}
+      className={classes.link}
+      type="subheading"
+      gutterBottom
+      color="inherit"
+    >
+      home
+    </Typography>
     {sections.map((section, index) => (
       <Link
         to={section.id}
@@ -53,7 +66,7 @@ const HeaderNav = ({ classes, style, sticky }) => (
         spy={true}
         hashSpy={true}
         offset={10}
-        duration={400}
+        duration={SCROLL_DURATION}
       >
         <Typography
           className={classes.link}
