@@ -1,17 +1,35 @@
+import { Component } from "react";
 import { withStyles } from "material-ui/styles";
 import Typography from "material-ui/Typography";
 
-import Section from "./section";
+const styles = theme => ({
+  container: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center"
+  }
+});
 
-const styles = theme => ({});
+class FAQ extends Component {
+  state = { expanded: false };
 
-const FAQ = ({ classes }) => (
-  <Section>
-    <Typography type="headline" gutterBottom>
-      FAQ
-    </Typography>
-    <Typography gutterBottom>FACTS!</Typography>
-  </Section>
-);
+  handleClickExpand = () => {
+    this.setState({ expanded: !this.state.expanded });
+  };
+
+  render() {
+    const { classes, question, answer } = this.props;
+    return (
+      <div>
+        <Typography type="title" gutterBottom>
+          {question}
+        </Typography>
+        <Typography type="subheading" gutterBottom>
+          {answer}
+        </Typography>
+      </div>
+    );
+  }
+}
 
 export default withStyles(styles)(FAQ);

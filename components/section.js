@@ -1,5 +1,6 @@
 import { withStyles } from "material-ui/styles";
 import classNames from "classnames";
+import Typography from "material-ui/Typography";
 
 import SectionDivider from "./section-divider";
 
@@ -22,10 +23,15 @@ const styles = {
   }
 };
 
-const Section = ({ classes, children, className }) => (
+const Section = ({ classes, children, title, className }) => (
   <div className={classes.root}>
     <SectionDivider />
-    <div className={classNames(classes.content, {}, className)}>{children}</div>
+    <div className={classNames(classes.content, {}, className)}>
+      <Typography type="headline" gutterBottom>
+        {title}
+      </Typography>
+      {children}
+    </div>
   </div>
 );
 

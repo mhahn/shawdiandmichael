@@ -6,10 +6,7 @@ import Section from "./section";
 const styles = theme => ({});
 
 const Lodging = ({ classes }) => (
-  <Section>
-    <Typography type="headline" gutterBottom>
-      Lodging
-    </Typography>
+  <Section title="Lodging">
     <Typography gutterBottom>Stay in a hotel!</Typography>
   </Section>
 );

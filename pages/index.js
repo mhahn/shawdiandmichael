@@ -12,7 +12,7 @@ import HeaderTitle from "../components/header-title";
 import HeaderNav from "../components/header-nav";
 import GettingThere from "../components/getting-there";
 import Lodging from "../components/lodging";
-import FAQ from "../components/faq";
+import FAQs from "../components/faqs";
 
 const styles = theme => ({
   "@global": {
@@ -93,8 +93,8 @@ const Page = ({ classes }) => (
         <Element name="lodging">
           <Lodging />
         </Element>
-        <Element name="faq">
-          <FAQ />
+        <Element name="faqs">
+          <FAQs />
         </Element>
       </StickyContainer>
     </div>

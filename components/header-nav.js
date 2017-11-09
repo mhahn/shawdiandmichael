@@ -38,7 +38,7 @@ const sections = [
     label: "lodging",
     id: "lodging"
   },
-  { label: "faq", id: "faq" }
+  { label: "faqs", id: "faqs" }
 ];
 
 const HeaderNav = ({ classes, style, sticky }) => (
