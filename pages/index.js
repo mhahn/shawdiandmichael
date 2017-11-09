@@ -39,6 +39,9 @@ const styles = theme => ({
     display: "flex",
     justifyContent: "center"
   },
+  image: {
+    width: "100%"
+  },
   scroll: {
     paddingTop: "4rem",
     display: "flex",
@@ -58,22 +61,6 @@ const styles = theme => ({
   }
 });
 
-/*
-
-- Getting There
-  - paragraph of text
-- Lodging
-  - 4 sections, each with a photo, subtitle and text
-  - The Lodge
-  - El Dorado Inn
-  - Best Western
-  - Airbnb
-- FAQ
-  - list of questions, when clicked, answer shows below
-- Footer
-
-  */
-
 const Page = ({ classes }) => (
   <div>
     <Head>
@@ -89,7 +76,7 @@ const Page = ({ classes }) => (
         </Sticky>
         <div className={classes.imageSection}>
           <div className={classes.imageContainer}>
-            <img src={`${splashImage}`} />
+            <img className={classes.image} src={`${splashImage}`} />
           </div>
         </div>
         <div className={classes.subtitleSection}>
