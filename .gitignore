@@ -11,4 +11,6 @@ node_modules
 .env
 terraform.tfstate.backup
 .envrc
-out
+
+out/index.html
+out/_next
