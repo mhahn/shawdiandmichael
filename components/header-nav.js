@@ -1,7 +1,13 @@
+import { Component } from "react";
 import { withStyles } from "material-ui/styles";
-import Typography from "material-ui/Typography";
 import classNames from "classnames";
 import { Link, animateScroll as scroll } from "react-scroll";
+
+import Typography from "material-ui/Typography";
+import Hidden from "material-ui/Hidden";
+import MenuIcon from "material-ui-icons/Menu";
+
+import HeaderMobileNav from "./header-mobile-nav";
 
 const SCROLL_DURATION = 500;
 
@@ -15,6 +21,21 @@ const styles = theme => ({
     backgroundColor: "white",
     height: 50,
     zIndex: 100
+  },
+  mobileContainer: {
+    justifyContent: "left"
+  },
+  modal: {
+    height: "100vh"
+  },
+  menuToggle: {
+    display: "flex",
+    cursor: "pointer",
+    justifyContent: "space-around",
+    marginLeft: 30
+  },
+  menuTitle: {
+    paddingLeft: 5
   },
   sticky: {
     color: "white",
@@ -41,44 +62,93 @@ const sections = [
   { label: "faqs", id: "faqs" }
 ];
 
-const HeaderNav = ({ classes, style, sticky }) => (
-  <div
-    className={classNames(classes.container, { [classes.sticky]: sticky })}
-    style={style}
-  >
-    <Typography
-      onClick={() => {
-        scroll.scrollToTop({ duration: SCROLL_DURATION });
-      }}
-      className={classes.link}
-      type="subheading"
-      gutterBottom
-      color="inherit"
-    >
-      home
-    </Typography>
-    {sections.map((section, index) => (
-      <Link
-        to={section.id}
-        key={index}
-        smooth={true}
-        activeClass={classes.active}
-        spy={true}
-        hashSpy={true}
-        offset={10}
-        duration={SCROLL_DURATION}
-      >
-        <Typography
-          className={classes.link}
-          type="subheading"
-          gutterBottom
-          color="inherit"
-        >
-          {section.label}
-        </Typography>
-      </Link>
-    ))}
-  </div>
-);
+class HeaderNav extends Component {
+  state = {
+    mobileOpen: false
+  };
+
+  handleDrawerToggle = () => {
+    this.setState({ mobileOpen: !this.state.mobileOpen });
+  };
+
+  render() {
+    const { classes, style, sticky } = this.props;
+    return (
+      <div>
+        <Hidden mdUp implementation="css">
+          <div
+            className={classNames(classes.container, {
+              [classes.sticky]: sticky,
+              [classes.mobileContainer]: true
+            })}
+            style={style}
+          >
+            <div
+              className={classes.menuToggle}
+              onClick={this.handleDrawerToggle}
+            >
+              <MenuIcon />
+              <Typography
+                className={classNames(classes.menuTitle, {
+                  [classes.sticky]: sticky
+                })}
+              >
+                menu
+              </Typography>
+            </div>
+            <HeaderMobileNav
+              sections={sections}
+              onRequestClose={this.handleDrawerToggle}
+              open={this.state.mobileOpen}
+            />
+          </div>
+        </Hidden>
+        <Hidden mdDown implementation="css">
+          <div
+            className={classNames(classes.container, {
+              [classes.sticky]: sticky
+            })}
+            style={style}
+          >
+            {!sticky ? null : (
+              <Typography
+                onClick={() => {
+                  scroll.scrollToTop({ duration: SCROLL_DURATION });
+                }}
+                className={classes.link}
+                type="subheading"
+                gutterBottom
+                color="inherit"
+              >
+                home
+              </Typography>
+            )}
+            {sections.map((section, index) => (
+              <Link
+                to={section.id}
+                key={index}
+                smooth={true}
+                activeClass={classes.active}
+                spy={true}
+                hashSpy={true}
+                offset={10}
+                duration={SCROLL_DURATION}
+              >
+                <Typography
+                  className={classes.link}
+                  type="subheading"
+                  gutterBottom
+                  color="inherit"
+                >
+                  {section.label}
+                </Typography>
+              </Link>
+            ))}
+          </div>
+        </Hidden>
+      </div>
+    );
+  }
+}
 
 export default withStyles(styles)(HeaderNav);
