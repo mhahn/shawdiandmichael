@@ -130,7 +130,6 @@ class HeaderNav extends Component {
                 smooth={true}
                 activeClass={classes.active}
                 spy={true}
-                hashSpy={true}
                 offset={10}
                 duration={SCROLL_DURATION}
               >

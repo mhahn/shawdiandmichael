@@ -34,6 +34,7 @@ export default class MaterialDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Raleway:400,500|Sigmar+One"
             rel="stylesheet"
           />
+          <link rel="icon" href="assets/favicon.ico" />
         </Head>
         <body>
           <Main />
