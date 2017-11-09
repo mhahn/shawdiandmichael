@@ -13,6 +13,7 @@ import HeaderNav from "../components/header-nav";
 import GettingThere from "../components/getting-there";
 import Lodging from "../components/lodging";
 import FAQs from "../components/faqs";
+import Footer from "../components/footer";
 
 const styles = theme => ({
   "@global": {
@@ -96,6 +97,7 @@ const Page = ({ classes }) => (
         <Element name="faqs">
           <FAQs />
         </Element>
+        <Footer />
       </StickyContainer>
     </div>
   </div>
