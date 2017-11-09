@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon -w server -w main.js --exec node main.js | ./node_modules/.bin/bunyan",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "NODE_ENV=production node main.js | ./node_modules/.bin/bunyan"
   },
   "dependencies": {
