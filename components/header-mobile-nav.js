@@ -32,7 +32,7 @@ const HeaderMobileNav = ({
   onRequestClose,
   sections: additionalSections
 }) => {
-  const sections = [{ id: "home", label: "home" }].concat(additionalSections);
+  const sections = [{ id: "home", label: "HOME" }].concat(additionalSections);
 
   return (
     <Drawer anchor="top" open={open} onRequestClose={onRequestClose}>
