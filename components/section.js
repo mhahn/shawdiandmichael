@@ -19,7 +19,7 @@ const styles = {
     boxSizing: "border-box",
     width: "100%",
     position: "relative",
-    height: "100vh"
+    maxWidth: 800
   }
 };
 

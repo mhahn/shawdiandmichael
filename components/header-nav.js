@@ -32,6 +32,7 @@ const styles = theme => ({
     display: "flex",
     cursor: "pointer",
     justifyContent: "space-around",
+    alignItems: "center",
     marginLeft: 30
   },
   menuTitle: {
@@ -52,14 +53,19 @@ const styles = theme => ({
 
 const sections = [
   {
-    label: "getting there",
-    id: "getting-there"
+    label: "DESTINATION",
+    id: "destination"
   },
   {
-    label: "lodging",
+    label: "TRAVELING IN",
+    id: "traveling-in"
+  },
+  {
+    label: "WHERE TO STAY",
     id: "lodging"
   },
-  { label: "faqs", id: "faqs" }
+  { label: "FAQs", id: "faqs" },
+  { label: "EXPLORE", id: "explore" }
 ];
 
 class HeaderNav extends Component {
@@ -93,7 +99,7 @@ class HeaderNav extends Component {
                   [classes.sticky]: sticky
                 })}
               >
-                menu
+                MENU
               </Typography>
             </div>
             <HeaderMobileNav
@@ -120,7 +126,7 @@ class HeaderNav extends Component {
                 gutterBottom
                 color="inherit"
               >
-                home
+                HOME
               </Typography>
             )}
             {sections.map((section, index) => (

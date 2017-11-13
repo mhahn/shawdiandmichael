@@ -31,7 +31,7 @@ export default class MaterialDocument extends Document {
             }
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Raleway:400,500|Sigmar+One"
+            href="https://fonts.googleapis.com/css?family=Barlow:400,500,900|Sacramento"
             rel="stylesheet"
           />
           <link rel="icon" href="assets/favicon.ico" />

@@ -10,9 +10,11 @@ import withRoot from "../components/withRoot";
 
 import HeaderTitle from "../components/header-title";
 import HeaderNav from "../components/header-nav";
-import GettingThere from "../components/getting-there";
+import Destination from "../components/destination";
+import TravelingIn from "../components/traveling-in";
 import Lodging from "../components/lodging";
 import FAQs from "../components/faqs";
+import Explore from "../components/explore";
 import Footer from "../components/footer";
 
 const styles = theme => ({
@@ -82,20 +84,26 @@ const Page = ({ classes }) => (
         </div>
         <div className={classes.subtitleSection}>
           <Typography type="title" gutterBottom color="inherit">
-            July 28, 2018 • Sonoma, CA
+            July 28, 2018 • 4pm
           </Typography>
-          <Typography gutterBottom>
-            We're so excited to be getting married!
+          <Typography type="subheading" gutterBottom color="inherit">
+            Sonoma, CA • Tyge Williams Cellars
           </Typography>
         </div>
-        <Element name="getting-there">
-          <GettingThere />
+        <Element name="destination">
+          <Destination />
+        </Element>
+        <Element name="traveling-in">
+          <TravelingIn />
         </Element>
         <Element name="lodging">
           <Lodging />
         </Element>
         <Element name="faqs">
           <FAQs />
+        </Element>
+        <Element name="explore">
+          <Explore />
         </Element>
         <Footer />
       </StickyContainer>

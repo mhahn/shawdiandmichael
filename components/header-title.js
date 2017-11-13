@@ -5,13 +5,16 @@ const styles = theme => ({
   container: {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
     marginTop: 50,
-    marginBottom: 100
+    marginBottom: 50
   },
   text: {
     fontFamily: theme.custom.titleFontFamily,
-    color: theme.custom.black
+    color: theme.custom.black,
+    fontWeight: 500
+  },
+  fancy: {
+    fontFamily: theme.custom.fancyFontFamily
   }
 });
 
@@ -23,15 +26,7 @@ const HeaderTitle = ({ classes }) => (
       gutterBottom
       color="inherit"
     >
-      Shawdi
-    </Typography>
-    <Typography
-      className={classes.text}
-      type="headline"
-      gutterBottom
-      color="inherit"
-    >
-      and
+      SHAWDI &
     </Typography>
     <Typography
       className={classes.text}
@@ -39,7 +34,7 @@ const HeaderTitle = ({ classes }) => (
       gutterBottom
       color="inherit"
     >
-      Michael
+      MICHAEL
     </Typography>
   </div>
 );

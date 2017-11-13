@@ -6,16 +6,16 @@ const styles = theme => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    padding: 50
+    padding: 100
   },
   caption: {
-    fontSize: 15
+    fontSize: 12
   }
 });
 
 const Footer = ({ classes }) => (
   <div className={classes.root}>
-    <Typography className={classes.caption} type="caption">
+    <Typography classes={{ caption: classes.caption }} type="caption">
       Built by the Groom, with a lot of opinions from the Bride 😅
     </Typography>
   </div>

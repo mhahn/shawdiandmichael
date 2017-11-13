@@ -4,32 +4,23 @@ import Typography from "material-ui/Typography";
 
 const styles = theme => ({
   container: {
+    paddingTop: 30,
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "center",
+    flexDirection: "column",
     alignItems: "center"
   }
 });
 
-class FAQ extends Component {
-  state = { expanded: false };
-
-  handleClickExpand = () => {
-    this.setState({ expanded: !this.state.expanded });
-  };
-
-  render() {
-    const { classes, question, answer } = this.props;
-    return (
-      <div>
-        <Typography type="title" gutterBottom>
-          {question}
-        </Typography>
-        <Typography type="subheading" gutterBottom>
-          {answer}
-        </Typography>
-      </div>
-    );
-  }
-}
+const FAQ = ({ classes, question, answer }) => (
+  <div className={classes.container}>
+    <Typography align="center" type="title" gutterBottom>
+      {question}
+    </Typography>
+    <Typography align="center" type="body1" gutterBottom>
+      {answer}
+    </Typography>
+  </div>
+);
 
 export default withStyles(styles)(FAQ);

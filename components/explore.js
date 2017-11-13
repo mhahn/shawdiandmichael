@@ -5,10 +5,10 @@ import Section from "./section";
 
 const styles = theme => ({});
 
-const GettingThere = ({ classes }) => (
-  <Section title="Getting There">
-    <Typography gutterBottom>Take a plane!</Typography>
+const Explore = ({ classes }) => (
+  <Section title="Explore">
+    <Typography gutterBottom>...brb!</Typography>
   </Section>
 );
 
-export default withStyles(styles)(GettingThere);
+export default withStyles(styles)(Explore);
