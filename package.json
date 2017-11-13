@@ -5,8 +5,7 @@
   "author": "mwhahn@gmail.com",
   "license": "MIT",
   "scripts": {
-    "dev":
-      "nodemon -w server -w main.js --exec node main.js | ./node_modules/.bin/bunyan",
+    "dev": "nodemon -w server -w main.js --exec node main.js | ./node_modules/.bin/bunyan",
     "build": "next build && next export",
     "start": "NODE_ENV=production node main.js | ./node_modules/.bin/bunyan"
   },
@@ -22,6 +21,7 @@
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
     "koa-bunyan-logger": "^2.0.0",
+    "koa-favicon": "^2.0.0",
     "koa-mount": "^3.0.0",
     "koa-router": "^7.2.1",
     "koa-session": "^5.5.0",

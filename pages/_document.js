@@ -34,7 +34,6 @@ export default class MaterialDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Barlow:400,500,900|Sacramento"
             rel="stylesheet"
           />
-          <link rel="icon" href="assets/favicon.ico" />
         </Head>
         <body>
           <Main />

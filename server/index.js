@@ -1,5 +1,6 @@
 import next from "next";
 import Koa from "koa";
+import favicon from "koa-favicon";
 import Router from "koa-router";
 import bodyParser from "koa-bodyparser";
 import cors from "kcors";
@@ -7,6 +8,7 @@ import mount from "koa-mount";
 import serve from "koa-static";
 import session from "koa-session";
 import logger from "koa-bunyan-logger";
+import path from "path";
 import { parse as parseUrl } from "url";
 
 import api from "./routers/api";
@@ -32,6 +34,7 @@ async function main() {
   server.use(logger());
   server.use(bodyParser());
   server.use(mount("/assets", serve("./assets")));
+  server.use(favicon(path.resolve("./assets/favicon.ico")));
 
   server.use(async (ctx, next) => {
     ctx.res.statusCode = 200;
