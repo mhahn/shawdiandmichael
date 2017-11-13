@@ -5,7 +5,8 @@
   "author": "mwhahn@gmail.com",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon -w server -w main.js --exec node main.js | ./node_modules/.bin/bunyan",
+    "dev":
+      "nodemon -w server -w main.js --exec node main.js | ./node_modules/.bin/bunyan",
     "build": "next build && next export",
     "start": "NODE_ENV=production node main.js | ./node_modules/.bin/bunyan"
   },
@@ -46,5 +47,8 @@
     "dotenv": "^4.0.0",
     "nodemon": "^1.11.0",
     "prettier": "^1.5.3"
+  },
+  "now": {
+    "alias": "shawdiandmichael.com"
   }
 }
