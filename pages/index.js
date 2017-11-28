@@ -14,7 +14,8 @@ import Destination from "../components/destination";
 import TravelingIn from "../components/traveling-in";
 import Lodging from "../components/lodging";
 import FAQs from "../components/faqs";
-import Explore from "../components/explore";
+import GuideSonoma from "../components/guide-sonoma";
+import GuideSanFrancisco from "../components/guide-san-francisco";
 import Footer from "../components/footer";
 
 const styles = theme => ({
@@ -102,8 +103,11 @@ const Page = ({ classes }) => (
         <Element name="faqs">
           <FAQs />
         </Element>
-        <Element name="explore">
-          <Explore />
+        <Element name="sonoma">
+          <GuideSonoma />
+        </Element>
+        <Element name="san-francisco">
+          <GuideSanFrancisco />
         </Element>
         <Footer />
       </StickyContainer>

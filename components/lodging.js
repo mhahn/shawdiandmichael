@@ -17,7 +17,7 @@ const styles = theme => ({
 });
 
 const Lodging = ({ classes }) => (
-  <Section title="WHERE TO STAY" className={classes.section}>
+  <Section title="Where to Stay" className={classes.section}>
     <div className={classes.container}>
       <Hotel name="The Lodge at Sonoma" img="the-lodge.jpg">
         This is the hotel Michael & Shawdi will be staying at! It's near Sonoma

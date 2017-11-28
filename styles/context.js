@@ -10,6 +10,10 @@ const theme = createMuiTheme({
     body1: {
       fontSize: "1.15rem",
       lineHeight: 1.5
+    },
+    body2: {
+      fontSize: "1.15rem",
+      lineHeight: 1.5
     }
   },
   custom: {

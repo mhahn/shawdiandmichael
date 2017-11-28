@@ -65,7 +65,8 @@ const sections = [
     id: "lodging"
   },
   { label: "FAQs", id: "faqs" },
-  { label: "EXPLORE", id: "explore" }
+  { label: "SONOMA", id: "sonoma" },
+  { label: "SAN FRANCISCO", id: "san-francisco" }
 ];
 
 class HeaderNav extends Component {

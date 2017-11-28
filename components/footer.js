@@ -15,7 +15,11 @@ const styles = theme => ({
 
 const Footer = ({ classes }) => (
   <div className={classes.root}>
-    <Typography classes={{ caption: classes.caption }} type="caption">
+    <Typography
+      classes={{ caption: classes.caption }}
+      type="caption"
+      align="center"
+    >
       Built by the Groom, with a lot of opinions from the Bride 😅
     </Typography>
   </div>

@@ -21,7 +21,6 @@ const styles = theme => ({
     padding: 20,
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
     maxWidth: 200
   },
   caption: {
