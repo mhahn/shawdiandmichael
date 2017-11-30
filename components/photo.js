@@ -3,7 +3,10 @@ import { withStyles } from "material-ui/styles";
 const styles = theme => ({
   root: {
     display: "flex",
-    justifyContent: "center"
+    justifyContent: "center",
+    maxWidth: 500,
+    marginLeft: 30,
+    marginRight: 30
   },
   container: {
     boxSizing: "border-box",
@@ -11,7 +14,7 @@ const styles = theme => ({
     boxShadow: "rgba(0, 0, 0, 0.25) 0px 1px 4px"
   },
   image: {
-    width: 500
+    width: "100%"
   }
 });
 
