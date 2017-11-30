@@ -22,18 +22,18 @@ const faqs = [
   {
     question: "Where should I be and when?",
     answer:
-      "The wedding starts promptly (ie not Persian Standard Time 😉) at 4pm at Tyge William Cellars in Sonoma, California."
+      "The wedding starts at 4pm at Tyge William Cellars in Sonoma, California. The festivities at the wedding venue will end at 11pm."
   },
   {
     question: "How do I get to the venue?",
     answer: (
       <div>
-        <Typography type="subheading" align="center">
+        <Typography type="body1" align="center">
           We will be providing shuttles from The Lodge and will have more
           detailed shuttle information once we get closer to the wedding date.
         </Typography>
         <br />
-        <Typography type="subheading" align="center">
+        <Typography type="body1" align="center">
           For those who would like to drive, there will be some limited parking
           at the venue. However, please keep in mind the evening will end with a
           late night and the roads are narrow and unfamiliar for most, so we
@@ -51,20 +51,18 @@ const faqs = [
     question: "Can I bring the kids?",
     answer: (
       <div>
-        <Typography type="subheading" align="center">
+        <Typography type="body1" align="center">
           We both love all the amazing kids in our life, and we hope we can
           spend time with them at other times during the wedding weekend.
           However, we aren’t able to accommodate children outside the bridal
           party at our wedding.
         </Typography>
         <br />
-        <Typography type="subheading" align="center">
+        <Typography type="body1" align="center">
           For those looking for babysitters in the area, we recommend reaching
-          out to Joanna’s Nannies by emailing{" "}
-          <a href="mailto:booking@joannasnannies.com">
-            booking@joannasnannies.com
-          </a>. They are based in Sonoma and have a great roster of sitters that
-          have experience with every age range.
+          out to Joanna’s Nannies by emailing booking@joannasnannies.com. They
+          are based in Sonoma and have a great roster of sitters that have
+          experience with every age range.
         </Typography>
       </div>
     )
@@ -77,7 +75,7 @@ const faqs = [
   {
     question: "I have many more questions! What’s the best way to reach you?",
     answer:
-      "Don’t hesitate to reach out with any questions at all! Email either of us at shawdi.ilbagian@gmail.com and mwhahn@gmail.com."
+      "Don’t hesitate to reach out with any questions at all! Email us at shawdiandmichael@gmail.com."
   }
 ];
 

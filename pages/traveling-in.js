@@ -32,12 +32,6 @@ const TravelingIn = ({ classes, pathname }) => (
           renting a car to make the 1 hour & 20 minute drive to Sonoma from
           there.
         </Typography>
-        <br />
-        <Typography type="body1" align="center" gutterBottom>
-          If you want to spend a few days in San Francisco before or after your
-          trip, you can see some of our suggestions on what to do (and where to
-          eat!) *here*.
-        </Typography>
       </Grid>
     </Grid>
   </Template>
