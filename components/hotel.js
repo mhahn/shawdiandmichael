@@ -5,27 +5,23 @@ const styles = theme => ({
   root: {
     margin: 30,
     display: "flex",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
+    justifyContent: "center",
+    height: 530
   },
   img: {
     objectFit: "cover",
-    width: 330,
+    width: "100%",
     height: "auto"
   },
   imgContainer: {
     display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
+    alignItems: "flex-start"
   },
   textContainer: {
-    padding: 20,
     display: "flex",
     flexDirection: "column",
-    maxWidth: 200
-  },
-  caption: {
-    lineHeight: "1.5",
-    fontSize: "0.9rem"
+    width: "100%"
   }
 });
 
@@ -35,17 +31,11 @@ const Hotel = ({ classes, name, children, img: imgName }) => (
       <img className={classes.img} src={`/assets/img/${imgName}`} />
     </div>
     <div className={classes.textContainer}>
-      <Typography type="title" align="left">
+      <Typography type="title" align="center">
         {name}
       </Typography>
       <br />
-      <Typography
-        align="left"
-        type="caption"
-        classes={{ caption: classes.caption }}
-      >
-        {children}
-      </Typography>
+      <Typography align="center">{children}</Typography>
     </div>
   </div>
 );
