@@ -21,8 +21,7 @@ const styles = theme => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
-    margin: 50
+    justifyContent: "center"
   },
   divider: {
     boderTop: "2px solid black",
