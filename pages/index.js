@@ -48,12 +48,16 @@ const Page = ({ classes, pathname }) => (
         -&nbsp;and&nbsp;-
       </Typography>
       <Typography gutterBottom type="title">
-        MICHAEL HAHN
+        MICHAEL WILDE HAHN
       </Typography>
       <hr className={classes.divider} />
       <Typography gutterBottom>SATURDAY, JULY 28, 2018</Typography>
-      <Typography gutterBottom>TYGE WILLIAM CELLARS</Typography>
-      <Typography gutterBottom>SONOMA, CA</Typography>
+      <Typography type="subheading" gutterBottom>
+        TYGE WILLIAM CELLARS
+      </Typography>
+      <Typography type="subheading" gutterBottom>
+        SONOMA, CA
+      </Typography>
     </div>
   </Template>
 );
