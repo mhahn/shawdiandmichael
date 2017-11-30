@@ -1,10 +1,22 @@
-import { withStyles } from "material-ui/styles";
 import Typography from "material-ui/Typography";
+import { withStyles } from "material-ui/styles";
+import Grid from "material-ui/Grid";
 
-import Section from "./section";
-import FAQ from "./faq";
+import withRoot from "../components/withRoot";
 
-const styles = theme => ({});
+import Template from "../components/template";
+import Photo from "../components/photo";
+import FAQ from "../components/faq";
+
+const styles = theme => ({
+  image: {
+    width: 630
+  },
+  content: {
+    maxWidth: 800,
+    paddingTop: 20
+  }
+});
 
 const faqs = [
   {
@@ -70,9 +82,12 @@ const faqs = [
 ];
 
 const FAQs = ({ classes }) => (
-  <Section title="FAQs">
-    {faqs.map((faq, index) => <FAQ key={index} {...faq} />)}
-  </Section>
+  <Template title="Shawdi & Michael: FAQs">
+    <Photo src="/assets/img/ilbagihahn.jpg" />
+    <div className={classes.content}>
+      {faqs.map((faq, index) => <FAQ key={index} {...faq} />)}
+    </div>
+  </Template>
 );
 
-export default withStyles(styles)(FAQs);
+export default withRoot(withStyles(styles)(FAQs));

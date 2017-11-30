@@ -1,15 +1,13 @@
 import { Component } from "react";
 import { withStyles } from "material-ui/styles";
+import Link from "next/link";
 import classNames from "classnames";
-import { Link, animateScroll as scroll } from "react-scroll";
 
 import Typography from "material-ui/Typography";
 import Hidden from "material-ui/Hidden";
 import MenuIcon from "material-ui-icons/Menu";
 
 import HeaderMobileNav from "./header-mobile-nav";
-
-const SCROLL_DURATION = 500;
 
 const styles = theme => ({
   container: {
@@ -53,6 +51,10 @@ const styles = theme => ({
 
 const sections = [
   {
+    label: "HOME",
+    id: ""
+  },
+  {
     label: "DESTINATION",
     id: "destination"
   },
@@ -62,11 +64,9 @@ const sections = [
   },
   {
     label: "WHERE TO STAY",
-    id: "lodging"
+    id: "where-to-stay"
   },
-  { label: "FAQs", id: "faqs" },
-  { label: "SONOMA", id: "sonoma" },
-  { label: "SAN FRANCISCO", id: "san-francisco" }
+  { label: "FAQs", id: "faqs" }
 ];
 
 class HeaderNav extends Component {
@@ -82,7 +82,7 @@ class HeaderNav extends Component {
     const { classes, style, sticky } = this.props;
     return (
       <div>
-        <Hidden mdUp implementation="css">
+        <Hidden smUp implementation="css">
           <div
             className={classNames(classes.container, {
               [classes.sticky]: sticky,
@@ -110,36 +110,15 @@ class HeaderNav extends Component {
             />
           </div>
         </Hidden>
-        <Hidden mdDown implementation="css">
+        <Hidden smDown implementation="css">
           <div
             className={classNames(classes.container, {
               [classes.sticky]: sticky
             })}
             style={style}
           >
-            {!sticky ? null : (
-              <Typography
-                onClick={() => {
-                  scroll.scrollToTop({ duration: SCROLL_DURATION });
-                }}
-                className={classes.link}
-                type="subheading"
-                gutterBottom
-                color="inherit"
-              >
-                HOME
-              </Typography>
-            )}
             {sections.map((section, index) => (
-              <Link
-                to={section.id}
-                key={index}
-                smooth={true}
-                activeClass={classes.active}
-                spy={true}
-                offset={10}
-                duration={SCROLL_DURATION}
-              >
+              <Link href={`/${section.id}`} prefetch>
                 <Typography
                   className={classes.link}
                   type="subheading"

@@ -3,7 +3,7 @@ import Typography from "material-ui/Typography";
 
 const styles = theme => ({
   root: {
-    padding: 30,
+    margin: 30,
     display: "flex",
     flexWrap: "wrap"
   },

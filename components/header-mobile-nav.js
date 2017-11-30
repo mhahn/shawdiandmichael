@@ -1,5 +1,4 @@
 import { withStyles } from "material-ui/styles";
-import { Link, animateScroll as scroll, scroller } from "react-scroll";
 
 import IconButton from "material-ui/IconButton";
 import Drawer from "material-ui/Drawer";
@@ -49,9 +48,7 @@ const HeaderMobileNav = ({
               key={section.id}
               onClick={() => {
                 onRequestClose();
-                section.id === "home"
-                  ? scroll.scrollToTop({ duration: 0 })
-                  : scroller.scrollTo(section.id, { offset: 10 });
+                console.log("link");
               }}
             >
               <Typography type="headline" gutterBottom>

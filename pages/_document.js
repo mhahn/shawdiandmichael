@@ -31,7 +31,7 @@ export default class MaterialDocument extends Document {
             }
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Barlow:400,500,900|Sacramento"
+            href="https://fonts.googleapis.com/css?family=Barlow:400,500,900|Mr+De+Haviland"
             rel="stylesheet"
           />
         </Head>

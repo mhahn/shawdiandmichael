@@ -25,7 +25,6 @@ const styles = {
 
 const Section = ({ classes, children, title, className }) => (
   <div className={classes.root}>
-    <SectionDivider />
     <div className={classNames(classes.content, {}, className)}>
       <Typography type="headline" gutterBottom>
         {title}

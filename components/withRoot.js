@@ -1,15 +1,12 @@
 import { Component } from "react";
 import { JssProvider } from "react-jss";
-import {
-  withStyles,
-  MuiThemeProvider
-} from "material-ui/styles";
+import { withStyles, MuiThemeProvider } from "material-ui/styles";
 import { getContext } from "../styles/context";
 
 const styles = theme => ({
   "@global": {
     html: {
-      background: theme.palette.background.default,
+      background: theme.palette.background.paper,
       WebkitFontSmoothing: "antialiased",
       MozOsxFontSmoothing: "grayscale"
     },

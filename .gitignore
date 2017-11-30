@@ -14,3 +14,4 @@ terraform.tfstate.backup
 
 out/index.html
 out/_next
+.DS_Store

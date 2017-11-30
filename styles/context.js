@@ -21,7 +21,7 @@ const theme = createMuiTheme({
     black: "black",
     headerHeight: 50,
     titleFontFamily: "'Barlow', sans-serif",
-    fancyFontFamily: "'Sacramento', cursive"
+    fancyFontFamily: "'Mr De Haviland', cursive"
   }
 });
 
