@@ -19,7 +19,6 @@ const styles = theme => ({
     width: "100%"
   },
   body: {
-    marginTop: 50,
     marginBottom: 50,
     display: "flex",
     alignItems: "center",

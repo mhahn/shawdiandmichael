@@ -10,6 +10,9 @@ import MenuIcon from "material-ui-icons/Menu";
 import HeaderMobileNav from "./header-mobile-nav";
 
 const styles = theme => ({
+  root: {
+    width: "100%"
+  },
   container: {
     display: "flex",
     justifyContent: "center",
@@ -18,7 +21,8 @@ const styles = theme => ({
     width: "100%",
     backgroundColor: "white",
     height: 50,
-    zIndex: 100
+    zIndex: 100,
+    width: "100%"
   },
   mobileContainer: {
     justifyContent: "left"
@@ -82,7 +86,7 @@ class HeaderNav extends Component {
   render() {
     const { classes, pathname } = this.props;
     return (
-      <div>
+      <div className={classes.root}>
         <Hidden smUp implementation="css">
           <div
             className={classNames(classes.container, {
