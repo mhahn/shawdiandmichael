@@ -6,6 +6,7 @@ import withRoot from "../components/withRoot";
 
 import Template from "../components/template";
 import Photo from "../components/photo";
+import benchImage from "../components/bench-image";
 
 const styles = theme => ({
   content: {
@@ -18,7 +19,7 @@ const styles = theme => ({
 
 const Destination = ({ classes }) => (
   <Template title="Shawdi & Michael: Destination">
-    <Photo src="/assets/img/bench.jpg" />
+    <Photo src={benchImage} />
     <Grid container className={classes.content}>
       <Grid item xs={2} />
       <Grid item xs={8} className={classes.body}>

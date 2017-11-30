@@ -6,6 +6,7 @@ import withRoot from "../components/withRoot";
 
 import Template from "../components/template";
 import Photo from "../components/photo";
+import carouselImage from "../components/carousel-image";
 
 const styles = theme => ({
   image: {
@@ -21,7 +22,7 @@ const styles = theme => ({
 
 const TravelingIn = ({ classes }) => (
   <Template title="Shawdi & Michael: Traveling In">
-    <Photo src="/assets/img/carousel.jpg" />
+    <Photo src={carouselImage} />
     <Grid container className={classes.content}>
       <Grid item xs={2} />
       <Grid item xs={8} className={classes.body}>

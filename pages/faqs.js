@@ -7,6 +7,7 @@ import withRoot from "../components/withRoot";
 import Template from "../components/template";
 import Photo from "../components/photo";
 import FAQ from "../components/faq";
+import ilbagianImage from "../components/ilbagihahn-image";
 
 const styles = theme => ({
   image: {
@@ -83,7 +84,7 @@ const faqs = [
 
 const FAQs = ({ classes }) => (
   <Template title="Shawdi & Michael: FAQs">
-    <Photo src="/assets/img/ilbagihahn.jpg" />
+    <Photo src={ilbagianImage} />
     <div className={classes.content}>
       {faqs.map((faq, index) => <FAQ key={index} {...faq} />)}
     </div>
