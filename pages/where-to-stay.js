@@ -16,8 +16,8 @@ const styles = theme => ({
   }
 });
 
-const WhereToStay = ({ classes }) => (
-  <Template title="Shawdi & Michael: Where to Stay">
+const WhereToStay = ({ classes, pathname }) => (
+  <Template title="Shawdi & Michael: Where to Stay" pathname={pathname}>
     <Grid container className={classes.content} justify="center" align="center">
       <Grid item xs={12} sm={6}>
         <Hotel name="The Lodge at Sonoma" img="the-lodge.jpg">

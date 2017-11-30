@@ -20,8 +20,8 @@ const styles = theme => ({
   }
 });
 
-const TravelingIn = ({ classes }) => (
-  <Template title="Shawdi & Michael: Traveling In">
+const TravelingIn = ({ classes, pathname }) => (
+  <Template title="Shawdi & Michael: Traveling In" pathname={pathname}>
     <Photo src={carouselImage} />
     <Grid container className={classes.content}>
       <Grid item xs={2} />

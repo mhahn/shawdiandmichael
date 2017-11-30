@@ -17,8 +17,8 @@ const styles = theme => ({
   }
 });
 
-const Destination = ({ classes }) => (
-  <Template title="Shawdi & Michael: Destination">
+const Destination = ({ classes, pathname }) => (
+  <Template title="Shawdi & Michael: Destination" pathname={pathname}>
     <Photo src={benchImage} />
     <Grid container className={classes.content}>
       <Grid item xs={2} />

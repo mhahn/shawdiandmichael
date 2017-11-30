@@ -28,14 +28,14 @@ const styles = theme => ({
   }
 });
 
-const Template = ({ title, classes, children }) => (
+const Template = ({ title, classes, children, pathname }) => (
   <div>
     <Head>
       <title>{title}</title>
     </Head>
     <div className={classes.content}>
       <HeaderTitle />
-      <HeaderNav />
+      <HeaderNav pathname={pathname} />
       <div className={classes.body}>{children}</div>
     </div>
   </div>

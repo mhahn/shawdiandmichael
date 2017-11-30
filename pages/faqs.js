@@ -82,8 +82,8 @@ const faqs = [
   }
 ];
 
-const FAQs = ({ classes }) => (
-  <Template title="Shawdi & Michael: FAQs">
+const FAQs = ({ classes, pathname }) => (
+  <Template title="Shawdi & Michael: FAQs" pathname={pathname}>
     <Photo src={ilbagianImage} />
     <div className={classes.content}>
       {faqs.map((faq, index) => <FAQ key={index} {...faq} />)}

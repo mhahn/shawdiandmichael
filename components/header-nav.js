@@ -41,11 +41,12 @@ const styles = theme => ({
     backgroundColor: theme.custom.black
   },
   link: {
-    padding: 30,
+    marginLeft: 30,
     cursor: "pointer"
   },
   active: {
-    color: "rgb(161, 155, 125)"
+    fontWeight: 500,
+    borderBottom: "1px solid black"
   }
 });
 
@@ -79,48 +80,38 @@ class HeaderNav extends Component {
   };
 
   render() {
-    const { classes, style, sticky } = this.props;
+    const { classes, pathname } = this.props;
     return (
       <div>
         <Hidden smUp implementation="css">
           <div
             className={classNames(classes.container, {
-              [classes.sticky]: sticky,
               [classes.mobileContainer]: true
             })}
-            style={style}
           >
             <div
               className={classes.menuToggle}
               onClick={this.handleDrawerToggle}
             >
               <MenuIcon />
-              <Typography
-                className={classNames(classes.menuTitle, {
-                  [classes.sticky]: sticky
-                })}
-              >
-                MENU
-              </Typography>
+              <Typography className={classes.menuTitle}>MENU</Typography>
             </div>
             <HeaderMobileNav
               sections={sections}
               onRequestClose={this.handleDrawerToggle}
               open={this.state.mobileOpen}
+              pathname={pathname}
             />
           </div>
         </Hidden>
         <Hidden smDown implementation="css">
-          <div
-            className={classNames(classes.container, {
-              [classes.sticky]: sticky
-            })}
-            style={style}
-          >
+          <div className={classes.container}>
             {sections.map((section, index) => (
-              <Link href={`/${section.id}`} prefetch>
+              <Link href={`/${section.id}`} prefetch key={section.id}>
                 <Typography
-                  className={classes.link}
+                  className={classNames(classes.link, {
+                    [classes.active]: pathname === `/${section.id}`
+                  })}
                   type="subheading"
                   gutterBottom
                   color="inherit"

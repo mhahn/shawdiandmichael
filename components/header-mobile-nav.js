@@ -1,4 +1,6 @@
 import { withStyles } from "material-ui/styles";
+import Link from "next/link";
+import classNames from "classnames";
 
 import IconButton from "material-ui/IconButton";
 import Drawer from "material-ui/Drawer";
@@ -22,6 +24,10 @@ const styles = theme => ({
   },
   link: {
     cursor: "pointer"
+  },
+  active: {
+    fontWeight: 500,
+    borderBottom: "1px solid black"
   }
 });
 
@@ -29,37 +35,33 @@ const HeaderMobileNav = ({
   classes,
   open,
   onRequestClose,
-  sections: additionalSections
-}) => {
-  const sections = [{ id: "home", label: "HOME" }].concat(additionalSections);
-
-  return (
-    <Drawer anchor="top" open={open} onRequestClose={onRequestClose}>
-      <div className={classes.modal}>
-        <div className={classes.close}>
-          <IconButton onClick={onRequestClose}>
-            <CloseIcon />
-          </IconButton>
-        </div>
-        <div className={classes.sections}>
-          {sections.map(section => (
-            <div
-              className={classes.link}
-              key={section.id}
-              onClick={() => {
-                onRequestClose();
-                console.log("link");
-              }}
-            >
-              <Typography type="headline" gutterBottom>
-                {section.label}
-              </Typography>
-            </div>
-          ))}
-        </div>
+  sections,
+  pathname
+}) => (
+  <Drawer anchor="top" open={open} onRequestClose={onRequestClose}>
+    <div className={classes.modal}>
+      <div className={classes.close}>
+        <IconButton onClick={onRequestClose}>
+          <CloseIcon />
+        </IconButton>
       </div>
-    </Drawer>
-  );
-};
+      <div className={classes.sections}>
+        {sections.map(section => (
+          <Link href={`/${section.id}`} prefetch key={section.id}>
+            <Typography
+              className={classNames(classes.link, {
+                [classes.active]: pathname === `/${section.id}`
+              })}
+              type="headline"
+              gutterBottom
+            >
+              {section.label}
+            </Typography>
+          </Link>
+        ))}
+      </div>
+    </div>
+  </Drawer>
+);
 
 export default withStyles(styles)(HeaderMobileNav);

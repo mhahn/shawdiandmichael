@@ -27,7 +27,7 @@ function withRoot(BaseComponent) {
         return BaseComponent.getInitialProps(ctx);
       }
 
-      return {};
+      return { pathname: ctx.pathname };
     }
 
     componentDidMount() {
@@ -40,6 +40,7 @@ function withRoot(BaseComponent) {
 
     render() {
       const context = getContext();
+      const { pathname } = this.props;
 
       return (
         <JssProvider registry={context.sheetsRegistry} jss={context.jss}>
@@ -48,7 +49,7 @@ function withRoot(BaseComponent) {
             sheetsManager={context.sheetsManager}
           >
             <AppWrapper>
-              <BaseComponent />
+              <BaseComponent pathname={pathname} />
             </AppWrapper>
           </MuiThemeProvider>
         </JssProvider>

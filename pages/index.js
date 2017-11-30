@@ -35,8 +35,8 @@ const styles = theme => ({
   }
 });
 
-const Page = ({ classes }) => (
-  <Template title="Shawdi & Michael">
+const Page = ({ classes, pathname }) => (
+  <Template title="Shawdi & Michael" pathname={pathname}>
     <Photo src={`${splashImage}`} />
     <div className={classes.subtitleSection}>
       <Typography gutterBottom>WE'RE GETTING MARRIED!</Typography>
