@@ -33,7 +33,7 @@ async function main() {
   server.use(cors());
   server.use(logger());
   server.use(bodyParser());
-  server.use(mount("/assets", serve("./assets")));
+  server.use(mount("/assets", serve("./assets", { maxage: 360000 })));
   server.use(favicon(path.resolve("./assets/favicon.ico")));
 
   server.use(async (ctx, next) => {
