@@ -14,7 +14,6 @@ const styles = theme => ({
     width: 630
   },
   content: {
-    maxWidth: 800,
     paddingTop: 20
   }
 });
@@ -85,9 +84,13 @@ const faqs = [
 const FAQs = ({ classes, pathname }) => (
   <Template title="Shawdi & Michael: FAQs" pathname={pathname}>
     <Photo src={ilbagianImage} />
-    <div className={classes.content}>
-      {faqs.map((faq, index) => <FAQ key={index} {...faq} />)}
-    </div>
+    <Grid container justify="center" className={classes.content}>
+      {faqs.map((faq, index) => (
+        <Grid key={index} item xs={10}>
+          <FAQ {...faq} />
+        </Grid>
+      ))}
+    </Grid>
   </Template>
 );
 

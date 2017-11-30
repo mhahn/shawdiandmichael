@@ -4,11 +4,16 @@ import Typography from "material-ui/Typography";
 
 const styles = theme => ({
   container: {
-    paddingTop: 30,
+    marginTop: 30,
+    marginLeft: 30,
+    marginRight: 30,
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
     alignItems: "center"
+  },
+  answer: {
+    maxWidth: 600
   }
 });
 
@@ -17,9 +22,15 @@ const FAQ = ({ classes, question, answer }) => (
     <Typography align="center" type="title" gutterBottom>
       {question}
     </Typography>
-    <Typography align="center" type="body1" gutterBottom>
-      {answer}
-    </Typography>
+    <div className={classes.answer}>
+      {typeof answer === "string" ? (
+        <Typography align="center" type="body1" gutterBottom>
+          {answer}
+        </Typography>
+      ) : (
+        answer
+      )}
+    </div>
   </div>
 );
 
