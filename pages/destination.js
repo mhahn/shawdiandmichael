@@ -9,9 +9,6 @@ import Photo from "../components/photo";
 import benchImage from "../components/bench-image";
 
 const styles = theme => ({
-  content: {
-    paddingTop: 50
-  },
   body: {
     maxWidth: 800
   }

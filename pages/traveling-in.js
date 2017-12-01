@@ -12,9 +12,6 @@ const styles = theme => ({
   image: {
     width: 630
   },
-  content: {
-    paddingTop: 50
-  },
   body: {
     maxWidth: 800
   }

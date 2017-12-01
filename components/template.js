@@ -4,6 +4,7 @@ import { Sticky, StickyContainer } from "react-sticky";
 
 import HeaderTitle from "./header-title";
 import HeaderNav from "./header-nav";
+import Footer from "./footer";
 
 const styles = theme => ({
   content: {
@@ -24,11 +25,14 @@ const styles = theme => ({
     alignItems: "center",
     justifyContent: "start",
     flexDirection: "column"
+  },
+  root: {
+    margin: 10
   }
 });
 
 const Template = ({ title, classes, children, pathname }) => (
-  <div>
+  <div className={classes.root}>
     <Head>
       <title>{title}</title>
     </Head>
@@ -37,6 +41,7 @@ const Template = ({ title, classes, children, pathname }) => (
       <HeaderNav pathname={pathname} />
       <div className={classes.body}>{children}</div>
     </div>
+    <Footer />
   </div>
 );
 

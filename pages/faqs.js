@@ -12,9 +12,6 @@ import ilbagianImage from "../components/ilbagihahn-image";
 const styles = theme => ({
   image: {
     width: 630
-  },
-  content: {
-    paddingTop: 20
   }
 });
 

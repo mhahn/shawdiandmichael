@@ -6,7 +6,8 @@ const styles = theme => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    padding: 100
+    paddingTop: 100,
+    paddingBottom: 20
   },
   caption: {
     fontSize: 12

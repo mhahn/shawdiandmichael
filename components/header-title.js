@@ -11,7 +11,8 @@ const styles = theme => ({
   text: {
     fontFamily: theme.custom.titleFontFamily,
     color: theme.custom.black,
-    fontWeight: 500
+    fontWeight: 500,
+    fontSize: "2.5rem"
   }
 });
 
