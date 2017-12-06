@@ -1,6 +1,5 @@
 import Head from "next/head";
 import { withStyles } from "material-ui/styles";
-import { Sticky, StickyContainer } from "react-sticky";
 
 import HeaderTitle from "./header-title";
 import HeaderNav from "./header-nav";
@@ -14,9 +13,6 @@ const styles = theme => ({
     flexDirection: "column",
     position: "relative",
     minHeight: "100vh",
-    width: "100%"
-  },
-  stickyContainer: {
     width: "100%"
   },
   body: {
