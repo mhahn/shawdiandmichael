@@ -70,6 +70,11 @@ const faqs = [
       "July in Sonoma will be warm during the day (80 F) and cooler in the evenings (55 F) so bringing layers for the evenings and having plenty of chilled rosé on hand during the day is recommended."
   },
   {
+    question: "Are are you registered for gifts?",
+    answer:
+      "We've decided not to register for gifts. We live in a very small apartment in San Francisco with no storage space. We appreciate so many of you are traveling all the way to Sonoma to celebrate our wedding with us. That is the best gift we could ever ask for."
+  },
+  {
     question: "I have many more questions! What’s the best way to reach you?",
     answer:
       "Don’t hesitate to reach out with any questions at all! Email us at shawdiandmichael@gmail.com."
