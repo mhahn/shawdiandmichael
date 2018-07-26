@@ -26,8 +26,9 @@ const faqs = [
     answer: (
       <div>
         <Typography type="body1" align="center">
-          We will be providing shuttles from The Lodge and will have more
-          detailed shuttle information once we get closer to the wedding date.
+          We have provided shuttles from The Lodge to Tyge William Cellars. To
+          take the shuttle, please be outside the entrance of the The Lodge
+          promptly at 3pm on Saturday.
         </Typography>
         <br />
         <Typography type="body1" align="center">
